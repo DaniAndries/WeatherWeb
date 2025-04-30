@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- CSS -->
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/styles.css') }}"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- icon -->
+    <link
+      rel="icon"
+      href="{{ url_for('static', filename='favicon.ico') }}"
+      type="image/x-icon"
+    />
+  </head>
+
+  <body>
+    <div
+      class="container-fluid d-flex flex-column align-items-center justify-content-center min-vh-100"
+    >
+      <!-- Título -->
+      <h1
+        class="fw-bold text-center text-uppercase mb-4"
+        style="color: #ff577f"
+      >
+      {{ _('Weather App') }} 🌤️
+      </h1>
+
+      <!-- Buscador de ciudad -->
+      <div id="search-container" class="mt-4">
+        <div align=center id="error-message"></div>
+        <form id="search-form" class="d-flex">
+          <input
+            type="text"
+            id="search-input"
+            class="form-control custom-input"
+            placeholder="{{ _('Enter city name...') }}"
+            required
+          />
+          <button type="submit" class="btn custom-btn ms-2">🔍 {{ _('Search') }}</button>
+        </form>
+      </div>
+
+      <!-- Selección de ciudad -->
+      <div id="form-container" class="mt-4 text-center">
+        <label class="form-label fw-semibold text-light">
+          {{ _('Or select a city:') }}
+        </label>
+
+        <div class="dropdown">
+          <button
+            class="btn custom-dropdown-btn dropdown-toggle"
+            type="button"
+            id="dropdownMenuButton"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+          {{ _('Select a city') }}
+          </button>
+          <ul
+            class="dropdown-menu custom-dropdown-menu"
+            aria-labelledby="dropdownMenuButton"
+          >
+            <li>
+              <a class="dropdown-item" href="#" data-value="New York"
+                >{{ _('New York') }}</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" href="#" data-value="London">{{ _('London') }}</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#" data-value="Tokyo">Tokyo</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#" data-value="Madrid">Madrid</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#" data-value="Buenos Aires"
+                >Buenos Aires</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <br>
+
+      <!-- Tarjeta de Clima -->
+      <div
+        id="weather-result"
+        class="weather-card text-center text-white w-100 w-md-75 w-lg-50"
+      >
+        <h2 id="city-name" class="fw-bold">{{ _('City Name') }}</h2>
+
+        <img
+          id="weather-icon"
+          src="https://openweathermap.org/img/wn/01d.png"
+          alt="Weather Icon"
+          class="img-fluid mx-auto d-block my-3"
+          style="max-width: 80px"
+        />
+
+        <p id="description" class="fs-5">{{ _('Clear Sky') }}</p>
+        <p id="temperature" class="fs-5">🌡️ {{ _('Temperature:') }}</p>
+        <p id="feels-like" class="fs-5">🤲 {{ _('Feels Like:') }}</p>
+        <p id="pressure" class="fs-5">🔽 {{ _('Pressure:') }}</p>
+        <p id="humidity" class="fs-5">💧 {{ _('Humidity:') }}</p>
+        <p id="visibility" class="fs-5">🌫️ {{ _('Visibility:') }}</p>
+        <p id="wind" class="fs-5">💨 {{ _('Wind:') }}</p>
+        <p id="sunrise" class="fs-5">🌅 {{ _('Sunrise:') }}</p>
+        <p id="sunset" class="fs-5">🌇 {{ _('Sunset:') }}</p>
+        
+
+        <!-- Contenedor para el pronóstico -->
+        <div id="forecast" class="fs-5 mt-3"></div>
+      </div>
+  </div>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+  </body>
+</html>

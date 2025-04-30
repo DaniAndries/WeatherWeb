@@ -1,0 +1,161 @@
+/* Estilo general */
+body {
+    background-color: #1A1A2E;
+    color: #EAEAEA;
+    font-family: "Poppins", sans-serif;
+}
+
+label {
+    display: block;
+    text-align: center;
+    width: 100%;
+}
+
+/* Estilo de la tarjeta */
+.weather-card {
+    max-width: 500px; /* Limita el ancho máximo en escritorio */
+    width: 100%; /* En móviles ocupará todo el ancho */
+    margin: 0 auto; /* Centrar en todas las pantallas */
+    background: linear-gradient(135deg, #88304E, #A63A5F);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Botón estilizado */
+.btn-custom {
+    background-color: #88304E;
+    color: white;
+    font-size: 1.2rem;
+    padding: 12px 20px;
+    border-radius: 10px;
+    transition: 0.3s ease-in-out;
+}
+
+.btn-custom:hover {
+    background-color: #FF577F;
+    transform: scale(1.05);
+}
+
+/* Select estilizado */
+.form-select-custom {
+    background-color: #522546;
+    color: 522546;
+    border: 2px solid #FF577F;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.wind-arrow {
+    font-size: 2rem;
+    display: inline-block;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Estilos generales del dropdown */
+.custom-dropdown-btn {
+    background-color: #572b3e; /* Fondo oscuro */
+    color: white; /* Texto blanco */
+    border: 2px solid #ff577f; /* Borde color rosa */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 10px 20px;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+/* Hover y foco en el botón */
+.custom-dropdown-btn:hover,
+.custom-dropdown-btn:focus {
+    background-color: #ff577f;
+    color: white;
+    border-color: #572b3e;
+}
+
+/* Estilos del menú desplegable */
+.custom-dropdown-menu {
+    background-color: #572b3e; /* Fondo del menú */
+    border-radius: 10px;
+    border: 2px solid #ff577f;
+}
+
+/* Estilos de cada opción del menú */
+.custom-dropdown-menu .dropdown-item {
+    color: white;
+    font-size: 16px;
+    padding: 10px 15px;
+    transition: background 0.3s ease;
+}
+
+/* Hover en las opciones */
+.custom-dropdown-menu .dropdown-item:hover {
+    background-color: #ff577f;
+    color: black;
+    border: 2px solid #572b3e;
+}
+
+/* Hover en las opciones */
+.custom-dropdown-menu .dropdown-item:hover,
+.custom-dropdown-menu .dropdown-item:focus,
+.custom-dropdown-menu .dropdown-item:active {
+    background-color: #ff577f !important; /* Mismo fondo */
+    color: black !important; /* Mismo color de texto */
+    outline: none !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+
+/* Estilos para el input */
+.custom-input {
+    background-color: #2b2b3d;
+    border: 2px solid #ff577f;
+    color: white;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.custom-input::placeholder {
+    color: #bbb;
+}
+
+/* Cambiar color de borde al hacer foco */
+.custom-input:focus {
+    border-color: #ff86a6;
+    box-shadow: 0 0 5px rgba(255, 87, 127, 0.7);
+    outline: none;
+}
+
+/* Mantener el fondo oscuro cuando se selecciona */
+.custom-input:focus {
+    background-color: #572b3e !important;  /* Color de fondo al seleccionar */
+    color: white;
+    border-color: #ff86a6;
+    box-shadow: 0 0 5px rgba(255, 87, 127, 0.7);
+    outline: none;
+}
+
+/* Estilos del botón */
+.custom-btn {
+    background-color: #ff577f;
+    color: white;
+    font-weight: bold;
+    border: 2px solid #ff577f;
+    border-radius: 8px;
+    padding: 0px 20px;
+    transition: all 0.3s ease;
+}
+
+/* Hover en el botón */
+.custom-btn:hover {
+    background-color: #ff86a6;
+    border-color: #ff86a6;
+    color: black;
+}
+
+#weather-result p {
+    line-height: 1;
+}
