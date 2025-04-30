@@ -141,5 +141,3 @@ function showMessage(message, className) {
     errorMsg.innerHTML = `<p class="${className}">${message}</p>`;
     errorMsg.style.display = message ? "block" : "none";
 }  
-
-<script crossorigin="anonymous" src="https://cdn.amcapi.com/translation/cloudtranslation-1.0.0.min.js"></script>
